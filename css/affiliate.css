@@ -10,14 +10,15 @@
 
 .register{
     width: 30%;
-    /* text-align: center; */
+    display: grid;
+    place-items: center;
 }
 
 .register > h3{
     /* text-align: start; */
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     font-size: 25px;
 }
 
@@ -26,8 +27,14 @@
 }
 .middle {
     margin: 10rem auto !important;
+    width: 80%;
 }
-
+.joinBinatec {
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
 .middle > h2{
     text-align: center;
 }
@@ -180,6 +187,21 @@ img{
 .affiliateFooter {
     background-color: #d9073c;
 }
+.flex1 > h4 {
+    color: black;
+}
+.flex1 > p {
+    color: black;
+}
+.cont2 > h3 {
+    margin: auto !important;
+}
+.cont2 > p {
+    margin: auto !important;
+}
+.calltoaction > p {
+    margin: auto;
+}
 
 #about > div.calltoaction  > a{
    
@@ -244,6 +266,10 @@ img{
     .flex1 > h4{
         font-size: 25px;
     }
+}
+
+.leftAlign {
+    text-align: center !important;
 }
 
 @media screen and (max-width: 800px) {
@@ -329,17 +355,17 @@ img{
 @media screen and (max-width: 649px) {
     .sub-image1{
         flex-direction: column;
-        align-items: baseline;
+        align-items: center;
     }
 
     .sub-image2{
         flex-direction: column;
-        align-items: baseline;
+        align-items: center;
     }
 
     .sub-image3{
         flex-direction: column;
-        align-items: baseline;
+        align-items: center;
     }
 
     img{
@@ -361,7 +387,7 @@ img{
 
 @media screen and (max-width: 510px){
     #about > div.calltoaction > a{
-        width:35%;
+        width: 50%;
     }
 
     #about > div.calltoaction > p{
@@ -370,8 +396,27 @@ img{
 }
 
 @media screen and (max-width: 404px){
+    .flex-service {
+        width: 100%;
+    }
     #about > h2{
-        font-size: 22px;
+        font-size: 30px;
+        padding: 0 30px;
+        margin: 0;
+    }
+    .flex2 {
+        width: 100%;
+    }
+    .image1 {
+        width: 100% !important;
+    }
+    .flex-cont {
+        width: 100%;
+        padding: 10px;
+    }
+    .flex1 > h4 {
+        margin-top: 0px;
+        color: black;
     }
 
     #about > div.calltoaction > p{
@@ -413,6 +458,12 @@ img{
     #about > div.calltoaction > a{
         width:40%;
         font-size: 1.2rem;
+    }
+    .middle {
+        padding: 0 30px;
+    }
+    .middle h2 {
+        font-size: 30px !important;
     }
 }
 
