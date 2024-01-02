@@ -359,3 +359,26 @@ $(function(){
      $('.navigation-close').hover(cursorhover,cursor);
    
    })
+
+   const images = document.querySelectorAll('img');
+
+const options = {
+  rootMargin: '0px 0px 200px 0px',
+};
+
+const observer = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const image = entry.target;
+      image.src = image.dataset.src;
+      observer.unobserve(image);
+    }
+  });
+}, options);
+
+images.forEach(image => {
+  observer.observe(image);
+});
+
+
+const leadPopupForm = document.querySelector(".")
