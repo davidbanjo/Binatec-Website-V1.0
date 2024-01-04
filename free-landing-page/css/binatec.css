@@ -1,0 +1,31 @@
+:root {
+    --ba_primaryColor: rgba(217,8,60);
+    --ba_secondaryColor: rgba(42,42,42);
+}
+
+.ba_announcementBar {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: var(--ba_primaryColor);
+    color: white;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ba_announcementBar > p {
+    margin: 0;
+}
+
+.ba_logo {
+    width: 60px;
+}
+
+.ba_bg-Secondary {
+    background-color: var(--ba_secondaryColor);
+}
+
+.ba_bg-Secondary:hover {
+    background-color: var(--ba_secondaryColor);
+}

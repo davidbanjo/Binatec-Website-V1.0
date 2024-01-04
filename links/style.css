@@ -1,0 +1,82 @@
+:root {
+    --ba-links-PrimaryColor: #0E1011;
+    --ba-links-text-color-1: #CFDEE5;
+    --ba-links-text-color-2: #BABABA;
+    --ba-links-text-color-3: #181818;
+}
+
+body {
+    background-color: var(--ba-links-PrimaryColor)
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--ba-links-text-color-1);
+    text-align: center;
+}
+
+p {
+    color: var(--ba-links-text-color-1);
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.links_head {
+    box-sizing: border-box;
+    width: 756px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #1B1B1B;
+    padding: 15px 0;
+}
+
+.links-logo-container {
+    width: 756px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links-binatec-desc {
+    width: 548px;
+    margin: auto;
+}
+
+.links-socials {
+    width: 756px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: auto;
+}
+
+.bi {
+    font-size: 25px;
+    color: var(--ba-links-text-color-2);
+}
+
+.links-socials > div {
+    border-radius: 50%;
+    height: 53px;
+    width: 53px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--ba-links-text-color-3);
+    cursor: pointer;
+}
+
+.links-spacer-x1 {
+    height: 25px;
+}
+
+.links-spacer-x2 {
+    height: 50px;
+}
