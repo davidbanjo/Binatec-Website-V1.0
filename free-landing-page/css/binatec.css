@@ -1,6 +1,10 @@
 :root {
-    --ba_primaryColor: rgba(217,8,60);
-    --ba_secondaryColor: rgba(42,42,42);
+    --ba_primaryColor: #D9083C;
+    --ba_secondaryColor: #2A2A2A;
+}
+
+a:hover {
+    color: inherit;
 }
 
 .ba_announcementBar {
@@ -28,4 +32,37 @@
 
 .ba_bg-Secondary:hover {
     background-color: var(--ba_secondaryColor);
+}
+
+.ba_SecondaryBtn {
+    padding: 12px 50px;
+    border-radius: 24px;
+    border: 1px solid var(--ba_primaryColor);
+    gap: 10px;
+    color: var(--ba_primaryColor);
+    text-decoration: none;
+}
+
+.ba_PrimaryBtn {
+    padding: 15px 50px;
+    border-radius: 24px;
+    background-color: var(--ba_primaryColor);
+    gap: 10px;
+    color: #f9f9f9;
+    text-decoration: none;
+}
+
+.ba_hero_textCont > h1, .ba_hero_textCont > p {
+    color: var(--ba_secondaryColor);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ba_hero_textCont > h1 {
+    font-weight: 800;
+    font-size: 64px;
+}
+
+.ba-mx-auto {
+    display: flex;
+    justify-content: center;
 }
