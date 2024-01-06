@@ -3,6 +3,9 @@
     --ba-links-text-color-1: #CFDEE5;
     --ba-links-text-color-2: #BABABA;
     --ba-links-text-color-3: #181818;
+    --ba-links-text-color-4: #D9083C;
+    --ba-links-text-color-5: #181818;
+    --ba-links-text-color-6: #f8f8f8;
 }
 
 body {
@@ -21,10 +24,22 @@ h1, h2, h3, h4, h5, h6 {
 p {
     color: var(--ba-links-text-color-1);
     font-family: 'Nunito Sans', sans-serif;
+    margin: 0;
 }
 
 h1 {
     font-size: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input {
+    color: var(--ba-links-text-color-1);
+    border: none;
 }
 
 .links_head {
@@ -61,6 +76,38 @@ h1 {
     margin: auto;
 }
 
+.links-btn-primary, .links-btn-secondary {
+    box-sizing: border-box;
+    color: var(--ba-links-text-color-6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+}
+
+.links-btn-primary > span > i, .links-btn-secondary > span > i {
+    font-size: 18px;
+}
+
+.links-btn-primary:hover {
+    background-color: var(--ba-links-text-color-3);
+    color: var(--ba-links-text-color-6);
+}
+
+.links-btn-secondary:hover {
+    color: var(--ba-links-text-color-6);
+    background-color: var(--ba-links-text-color-4);
+}
+
+.links-btn-primary {
+    background-color: var(--ba-links-text-color-3);
+}
+
+.links-btn-secondary {
+    background-color: var(--ba-links-text-color-4);
+}
+
 .bi {
     font-size: 25px;
     color: var(--ba-links-text-color-2);
@@ -88,10 +135,126 @@ h1 {
     gap: 30px;
 }
 
+.copies {
+    text-align: center;
+    color: var(--ba-links-text-color-4);
+}
+
 .links-spacer-x1 {
     height: 25px;
 }
 
 .links-spacer-x2 {
     height: 50px;
+}
+
+.links-ebook-ad {
+    width: 756px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.links-ebook-ad > div > img {
+    width: 300px;
+}
+
+.links-ebook-ad > div:last-child {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.links_rounded_box {
+    box-sizing: border-box;
+    background-color: var(--ba-links-text-color-5);
+    border-radius: 17px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.links_rounded_btn {
+    background-color: var(--ba-links-text-color-4);
+    color: var(--ba-links-text-color-1);
+    border-radius: 17px;
+    width: 100%;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+    font-size: 23px;
+    padding: 17px;
+    border: none;
+}
+
+.links_blog_container {
+    width: 756px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+@media screen and (max-width: 756px) {
+
+    body {
+        padding: 0 40px;
+    }
+
+    .links_blog_container, .links-ebook-ad, .links-socials, .links_head, .links-logo-container, .links-binatec-desc {
+        width: 100%;
+    }
+    .links_buttons {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 548px) {
+
+    .links-ebook-ad {
+        flex-direction: column;
+    }
+
+    .links-ebook-ad > div {
+        width: 100% !important;
+    }
+
+    .links-ebook-ad > div:first-child {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .links_buttons {
+        gap: 15px;
+    }
+
+    .links-binatec-desc {
+        text-align: justify;
+    }
+
+    .links-socials {
+        gap: 10px;
+    }
+
+    .links-socials > div {
+        width: 43px !important;
+        height: 43px;
+    }
+
+    .bi {
+        font-size: 18px;
+    }
+
+    .links-btn-primary > span > i, .links-btn-secondary > span > i {
+        font-size: 16px;
+    }
 }
