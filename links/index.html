@@ -124,11 +124,34 @@
                 <p>$0.00</p>
                 <p>Free</p>
             </div>
-            <form>
+            <form
+                id="subscriptionForm"
+            >
                 <input class="links_rounded_box" type="text" placeholder="Name" name="name" required />
                 <input class="links_rounded_box" type="email" placeholder="Email" name="email" required />
-                <button class="links_rounded_btn" type="submit">Get for FREE</button>
+                <button class="links_rounded_btn" type="button" onclick="submitForm()">Get for FREE</button>
             </form>
+            <script defer >
+                function submitForm() {
+                    var form = document.getElementById("subscriptionForm");
+                    var formData = new FormData(form);
+        
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", "https://formspree.io/f/xnqenbkj", true);
+                    
+                    xhr.onreadystatechange = function () {
+                        if (xhr.readyState === 4) {
+                            // Form submission successful, redirect after 2 seconds
+                            setTimeout(function () {
+                                window.location.href = "https://binatecagency.thinkific.com/";
+                            }, 1000);
+                        }
+                        // You can add more handling for different HTTP statuses if needed
+                    };
+        
+                    xhr.send(formData);
+                }
+            </script>
         </div>
     </div>
     <div class="links-spacer-x2"></div>
