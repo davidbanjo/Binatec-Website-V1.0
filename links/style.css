@@ -146,6 +146,30 @@ a {
     gap: 30px;
 }
 
+.landing-btn {
+    width: 480px;
+    margin: auto;
+    display: flex;
+}
+
+.landing-btn > a {
+    width: 100%;
+}
+
+.landing-btn > a > button {
+    width: 100%;
+    background-color: var(--ba-links-text-color-6);
+    color: var(--ba-links-PrimaryColor);
+    padding: 20px 0;
+    font-family: inherit;
+    font-size: 21px
+}
+
+.landing-btn > a > button:hover {
+    background-color: var(--ba-links-text-color-6);
+    color: var(--ba-links-PrimaryColor);
+}
+
 .copies {
     text-align: center;
     color: var(--ba-links-text-color-4);
@@ -212,13 +236,15 @@ a {
     gap: 15px;
 }
 
+
+
 @media screen and (max-width: 756px) {
 
     body {
         padding: 0 40px;
     }
 
-    .links_blog_container, .links-ebook-ad, .links-socials, .links_head, .links-logo-container, .links-binatec-desc {
+    .links_blog_container, .links-ebook-ad, .links-socials, .links_head, .links-logo-container, .links-binatec-desc, .landing-btn {
         width: 100%;
     }
     .links_buttons {
