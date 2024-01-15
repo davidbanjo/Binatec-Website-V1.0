@@ -57,7 +57,24 @@
 <body>
     <header class="links_head">
         <a hr target="_blank" href="../index.html">
-            <img src="./assets/img/links_logo.png" alt="links-head-logo">
+            <img src="./assets/img/Free-LANDING-PAGE.png" id="responsiveImage" alt="links-head-logo">
+            <script defer >
+                function updateImage() {
+                    var imageElement = document.getElementById("responsiveImage");
+                    var deviceWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        
+                    // Check if the device width is less than or equal to 430px
+                    if (deviceWidth <= 430) {
+                        imageElement.src = "./assets/img/mobile-landing.png"; // Update with the path to the smaller image
+                    } else {
+                        imageElement.src = "./assets/img/Free-LANDING-PAGE.png"; // Default image for larger screens
+                    }
+                }
+        
+                // Call the function on page load and resize
+                window.onload = updateImage;
+                window.onresize = updateImage;
+            </script>
         </a>
     </header>
     <div class="links-spacer-x2"></div>
