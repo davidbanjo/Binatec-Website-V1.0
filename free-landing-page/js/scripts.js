@@ -109,6 +109,9 @@ const initialCountdown = {
       }, function(error) {
          console.log('FAILED...', error);
          document.getElementById("form-errors").innerText = `An error has occured, please try again :(`;
+         setTimeout(function() {
+          document.getElementById("form-errors").innerText = "";
+        }, 10000);
       });
 
     } else {
@@ -117,6 +120,9 @@ const initialCountdown = {
       }else{
         document.getElementById("form-errors").innerText = `${errors} is required`;
       }
+      setTimeout(function() {
+        document.getElementById("form-errors").innerText = "";
+      }, 10000);
     }
 
   }
