@@ -43,7 +43,7 @@
                             <h1 class="mb-3">Make your dream business goal come true</h1>
                             <p class="mb-5">when you become 1 of the 5 clients we will be designing a free landing page for
                                 to nourish their business growth this January.</p>
-                            <a class="ba_PrimaryBtn" href="#">Get Started Now</a>
+                            <a class="ba_PrimaryBtn" href="#signup">Get Started Now</a>
                         </div>
                     </div>
                     <div class="ba-mx-auto mt-5">
@@ -72,8 +72,8 @@
                         <p class="">Welcome to Binatec Agency where we turn your digital aspirations into reality. In the vast online landscape, a well-crafted landing page is the gateway to success, and we're here to guide you through every step of the journey.</p>
                         <p>We understand the power of first impressions. Your landing page isn't just a URL; it's an experience. Our mission is simple: Empower businesses like yours with compelling, conversion-focused landing pages.</p>
                         <div class="d-flex flex-column flex-lg-row justify-content-between justify-content-lg-start align-items-center w-fullb">
-                            <a class="ba_PrimaryBtn mb-4 mb-lg-0 w-fullb text-center mx-auto" href="#signup">About us</a>
-                            <a id="about-link" class="ba_SecondaryBtn ms-lg-5 w-fullb text-center mx-auto" href="#signup"> 
+                            <a class="ba_PrimaryBtn mb-4 mb-lg-0 w-fullb text-center mx-auto" href="../index.html">About us</a>
+                            <a id="about-link" target="_blank" class="ba_SecondaryBtn ms-lg-5 w-fullb text-center mx-auto" href="https://youtu.be/ffPtnGT3zAQ?si=kuv6_b23yo4goXtx"> 
 
                                 <svg id="about-svg" class="me-2" width="25" height="25" viewBox="0 0 25 25" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.389 22.6001C17.9118 22.6001 22.389 18.1229 22.389 12.6001C22.389 7.07725 17.9118 2.6001 12.389 2.6001C6.86613 2.6001 2.38898 7.07725 2.38898 12.6001C2.38898 18.1229 6.86613 22.6001 12.389 22.6001Z" stroke="#D9083C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -93,7 +93,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-6">
-                        <img class="img-fluid" src="assets/img/features.png" alt="">
+                        <img class="img-fluid img-width" src="assets/img/features.png" alt="">
                     </div>
                     <div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center">
                         <h1 class="mb-5 mt-3 mt-lg-0 text-start w-fullb">Your Landing Page Features.</h1>
@@ -117,7 +117,7 @@
                                 <div class="row gy-3">
                                     <div class="col-12">
                                         <div class="d-inline features-imgs">
-                                            <img class="w-fluid" src="assets/img/Outline.svg" alt="">
+                                            <img class="w-fluid" src="assets/img/note.svg" alt="">
                                         </div>
                                     </div>
                                     <div class="col-12">
@@ -132,7 +132,7 @@
                                 <div class="row gy-3">
                                     <div class="col-12">
                                         <div class="d-inline features-imgs">
-                                            <img class="w-fluid" src="assets/img/Outline.svg" alt="">
+                                            <img class="w-fluid" src="assets/img/open.svg" alt="">
                                         </div>
                                     </div>
                                     <div class="col-12">
@@ -147,7 +147,7 @@
                                 <div class="row gy-3">
                                     <div class="col-12">
                                         <div class="d-inline features-imgs">
-                                            <img class="w-fluid" src="assets/img/Outline.svg" alt="">
+                                            <img class="w-fluid" src="assets/img/hierachy.svg" alt="">
                                         </div>
                                     </div>
                                     <div class="col-12">
@@ -255,29 +255,33 @@
         
         
         <!-- Form -->
-        <section class="my-5">
+        <section id="signup" class="my-5">
             <div class="container">
                 <div class="row py-3 text-center">
                     <div class="col-12">
                         <h2>Save Your Space Now</h2>
                     </div>
                     <div class="col-12">
-                        <h4 id="countdown"></h4>
+                        <h4 id="countdown" class="binatec__text-red"></h4>
                     </div>
                 </div>
                 <div class="form mb-5">
-                    <form action="#" class="form-container">
+                    <form id="myForm" action="#" class="form-container">
                         <div class="form__group">
-                            <input type="name" id="name" class="form__field" placeholder="Enter your name">
-                            <label for="name" class="form__label">Name</label>
+                            <input type="firstName" id="firstName" class="form__field" placeholder="Enter your First Name">
+                            <label for="firstName" class="form__label">First Name<span class="form-red">*</span></label>
+                        </div>
+                        <div class="form__group">
+                            <input type="lastName" id="lastName" class="form__field" placeholder="Enter your Last Name">
+                            <label for="lastName" class="form__label">Last Name<span class="form-red">*</span></label>
                         </div>
                         <div class="form__group">
                             <input type="email" id="email" class="form__field" placeholder="Enter your email">
-                            <label for="email" class="form__label">Email</label>
+                            <label for="email" class="form__label">Email<span class="form-red">*</span></label>
                         </div>
                         <div class="form__group">
                             <input type="company" id="company" class="form__field" placeholder="Enter your company name">
-                            <label for="company" class="form__label">Company name (If applicable)</label>
+                            <label for="company" class="form__label">Company name<span class="form-red">*</span></label>
                         </div>
                         <div class="form__group">
                             <input type="website" id="website" class="form__field" placeholder="Enter your website name">
@@ -287,13 +291,18 @@
                             <input type="industry" id="industry" class="form__field" placeholder="Industry">
                             <label for="industry" class="form__label">Industry</label>
                         </div>
-                        <div class="form__group">
-                            <input type="specifications" id="specifications" class="form__field" placeholder="Landing page specifications">
-                            <label for="specifications" class="form__label">Landing page specifications</label>
+                        <div class="form__group last__input">
+                            <input type="specifications" id="specifications" class="form__field" placeholder="Additional info">
+                            <label for="specifications" class="form__label">Additional info</label>
+                        </div>
+
+                        <div class="form-error-div last__input my-3">
+                            <p id="form-errors" class="form-red"></p>
+                            <p id="form-success" class="form-green"></p>
                         </div>
 
                         <div class="form__submit">
-                            <button class="ba_FormBtn mb-4 mb-lg-0 text-center" type="submit">Submit form</button>
+                            <button class="ba_FormBtn mb-4 mb-lg-0 text-center" type="button" onclick="submitForm()">Submit form</button>
                         </div>
 
                     </form>
@@ -337,19 +346,19 @@
             <div class="container">
                 <div class="footer-row">
                     <div class="footer-icons">
-                        <a href="#">
+                        <a href="https://www.facebook.com/binatecagency">
                             <img class="icon" src="assets/img/icons/facebook.svg" alt="">
                         </a>
-                        <a href="#">
+                        <a href="https://instagram.com/binatecagency">
                             <img class="icon" src="assets/img/icons/instagram.svg" alt="">
                         </a>
-                        <a href="#">
+                        <a href="https://www.linkedin.com/company/binatec-agency">
                             <img class="icon" src="assets/img/icons/linkedin.svg" alt="">
                         </a>
-                        <a href="#">
+                        <a href="mailto:binatecagency@gmail.com">
                             <img class="icon" src="assets/img/icons/email.svg" alt="">
                         </a>
-                        <a href="#">
+                        <a href="https://twitter.com/binatecagency">
                             <img class="icon" src="assets/img/icons/x.svg" alt="">
                         </a>
                     </div>
@@ -363,5 +372,21 @@
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+
+        <script class="ss-go-top" type="text/javascript" id="zsiqchat">
+            var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode: "0c8f2ce3611fa2e68232100919b41e5f0543f6331c9a4537b65e14fd6d0c1783", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);
+            $zoho.salesiq.ready=function() {
+                $zoho.salesiq.chatbubble.visible("60");
+            }
+        </script>
+
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+            (function(){
+            emailjs.init("3bK_RK7nCj73A6CtK");
+             })();
+        </script>
     </body>
 </html>

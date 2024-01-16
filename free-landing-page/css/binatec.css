@@ -123,6 +123,21 @@ a:hover {
     justify-content: center;
 }
 
+p, a, label {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.img-width{
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .w-fullb{
     width: 100%;
@@ -134,12 +149,6 @@ a:hover {
     background-color: #DFEAFF;
     border-radius: 10px;
     padding: 15px;
-}
-
-.features-div{
-    /* height: 100%;
-    justify-content: between;
-    align-items: start; */
 }
 
 .services-div{
@@ -261,6 +270,15 @@ label,
     margin-top: 1rem;
 }
 
+.last__input{
+    grid-column: 1 / span 2;
+    width: 100%;
+}
+
+.last__input > input{
+    width: 90%;
+}
+
 footer.footer{
     background-color: #2A2A2A;
 }
@@ -298,6 +316,20 @@ footer.footer{
     /* fill: #D9083C; */
 }
 
+.form-red{
+    color: #D9083C;
+}
+
+.form-green{
+    color: green;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.form-error-div{
+    width: 100%;
+}
+
 
 @media only screen and (max-width: 600px) {
     .services-div {
@@ -325,11 +357,28 @@ footer.footer{
         grid-column: 1 / span 1;
     }
 
+    .last__input{
+    grid-column: 1 / span 1;
+    width: 100%;
+}
+
+    .last__input > input{
+        width: 90%;
+    }
+
     .form__field {
         width: 100%;
     }
 
     .footer-icons{
         width: 80%;
+    }
+
+    .img-width{
+        width: 90%;
+        height: auto;
+        object-fit: cover;
+        margin-left: auto;
+        margin-right: auto;
     }
   }

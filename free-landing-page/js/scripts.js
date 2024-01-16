@@ -41,3 +41,85 @@ const initialCountdown = {
 
   // Initial call to set the initial countdown
   updateCountdown();
+
+
+
+  function submitForm() {
+    // Get the form element
+    document.getElementById("form-errors").innerText = "";
+    let errors = []
+
+    // Get the values from form elements
+    const firstNameValue = document.getElementById('firstName').value;
+    const lastNameValue = document.getElementById('lastName').value;
+    const emailValue = document.getElementById('email').value;
+    const companyValue = document.getElementById('company').value;
+    const websiteValue = document.getElementById('website').value;
+    const industryValue = document.getElementById('industry').value;
+    const specificationsValue = document.getElementById('specifications').value;
+
+    
+    // Do something with the values (for example, log them)
+    console.log('here1= ', firstNameValue)
+    if(!firstNameValue){
+      errors.push("First name ")
+    }
+    if(!lastNameValue){
+      errors.push("Last name ")
+    }
+    if(!emailValue){
+      errors.push("Email ")
+    }
+    if(!companyValue){
+      errors.push("Company name ")
+    }
+
+    
+    // Check if the form is valid before submitting
+    if (firstNameValue && lastNameValue && emailValue && companyValue) {
+      // Submit the form
+
+      var templateParams = {
+        first_name: firstNameValue,
+        last_name: lastNameValue,
+        email: emailValue,
+        company_name: companyValue,
+        website: websiteValue,
+        industry: industryValue,
+        specifications: specificationsValue
+      };
+    
+      emailjs.send('service_5kk52of', 'template_do08q1d', templateParams)
+      .then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+        
+        document.getElementById("form-success").innerText = `Form submitted successfully!!! :)`;
+
+        setTimeout(function() {
+          document.getElementById("form-success").innerText = "";
+        }, 10000);
+
+        document.getElementById('firstName').value = "";
+        document.getElementById('lastName').value = "";
+        document.getElementById('email').value = "";
+        document.getElementById('company').value = "";
+        document.getElementById('website').value = "";
+        document.getElementById('industry').value = "";
+        document.getElementById('specifications').value = "";
+      }, function(error) {
+         console.log('FAILED...', error);
+         document.getElementById("form-errors").innerText = `An error has occured, please try again :(`;
+      });
+
+    } else {
+      if(errors.length > 1){
+        document.getElementById("form-errors").innerText = `${errors} are required`;
+      }else{
+        document.getElementById("form-errors").innerText = `${errors} is required`;
+      }
+    }
+
+  }
+
+
+  
